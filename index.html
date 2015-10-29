@@ -2,11 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script src='js/jquery.min.js'></script>
+  <link rel="stylesheet" href="main.css">
   <title>Scrolling Game</title>
 </head>
 <body>
-  
+
+
+  <div id='start-game' class='active'>
+    <h1> Astroman </h1>
+    <h2> Wecome to space. Try to Survive </h2>
+    <p> Press enter for survival </p>
+    <h4> Controls </h4>
+    <p>Use left/right arrows to move and up to jump! <p>
+  </div>
+  <div id='game'>
+  </div>
+  <div class='score'></div>
+  <div class='lives'></div>
+
+  <div id='game-over' class='hidden'>
+    <h2>It looks like space was just too harsh. </h2>
+    <h4> Press Enter to try again </h4>
+  </div>
+
+  <div id='game-won' class='hidden'>
+    <h2>Space has nothing on you.  </h2>
+    <h4> Press Enter to try again, but with only one life. </h4>
+  </div>
+
+  <div id='next-level' class='hidden'>
+    <h2>You survived. We need to try harder to kill you.  </h2>
+    <h4> Prepare yourself</h4>
+  </div>
+
 </body>
+  
+  <script src='js/utils.js'></script>
+  <script src='js/star.js'></script>
+  <script src='js/goo.js'></script> 
+  <script src='js/player.js'></script>
+  <srcipt src='js/player.js'></srcipt>
+  <script src='js/canvas_display.js'></script>
+  <script src='js/level.js'></script> 
+  <script src='js/levels.js'></script> 
+  <script src='js/app.js'></script>
   <script src='game.js'></script>
-  <link rel="stylesheet" href="main.css">
+
 </html>

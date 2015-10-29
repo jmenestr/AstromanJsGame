@@ -1,37 +1,35 @@
-table {
-  margin: 0;
-  padding: 0;
+@font-face { font-family: Arcade; src: url('ARCADECLASSIC.TTF'); }
+
+body {
+  font-family: Arcade;
+  background: url('sprites/stars.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#game, 
+#start-game,
+#game-over,
+#next-level  {
+  margin: 20px auto;
+  width: 100%;
+  font-size: 40px;
+  color: white;
+  text-align: center;
 }
 
-.background {
-  background: rgb(52, 166, 251);
-  border-spacing: 0;
+
+#game-over {
+  color: red;
+  font-size: 40px;
+}
+.score, .lives {
+  color: white;
+  font-size: 30px;
+}
+.active {
+  display: block;
 }
 
-.background td {
-  padding: 0;
-}
-
- .lava {
-  background: red;
-}
-
-.wall {
-  background: orange;
-}
-
-.coin {
-  color: yellow;
-}
-
-.actor {
-  position: absolute;
-}
-
-.coin {
-  background: rgb(241, 229, 89);
-}
-
-.player {
-  background: rgb(64, 64, 64);
+.hidden {
+  display: none;
 }
