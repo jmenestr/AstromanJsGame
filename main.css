@@ -3,6 +3,7 @@
 body {
   font-family: Arcade;
   background: url('sprites/stars.jpg');
+  zoom: 130%;
   background-repeat: no-repeat;
   background-size: cover;
 }
