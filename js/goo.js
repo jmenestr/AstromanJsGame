@@ -8,7 +8,6 @@
       this.speed = new Vector(2, 0);
     }
     else if (char === "|") {
-      debugger;
       this.speed = new Vector(0, -2);
     }
     else if (char==="v") {

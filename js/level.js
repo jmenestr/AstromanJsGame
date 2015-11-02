@@ -7,7 +7,7 @@
   this.actors = [];
   this.actorChars = {
     "@": Player,
-    "o": Star,
+    "*": Star,
     "=": Goo, "|": Goo, "v": Goo
   };
 
@@ -15,11 +15,11 @@
     var row = plan[y], gridLine = [];
     for(var x = 0; x < this.width; x++) {
       var char = row[x], type = null;
+
       var Actor = this.actorChars[char];
-      // "Initialize all moving charactrs in a seperate actors array"
       if (Actor) {
         this.actors.push(new Actor(new Vector(x,y),char));
-      } else if (char === 'x') {
+      } else if (char === '#') {
           type = "wall";
       } else if (char ==='!') {
           type = "goo";

@@ -69,7 +69,6 @@ function trackKeys(codes) {
     $next.show();
     window.setTimeout(function() {
       $next.hide();
-      debugger;
       startLevel(level + 1);
     },2000)
 
