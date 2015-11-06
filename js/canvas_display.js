@@ -39,9 +39,6 @@
   CanvasDisplay.prototype.clear = function() {
     this.context.clearRect(0,0, this.canvas.width, this.canvas.height);
 
-    // this.context.drawImage(background, 
-    //   this.viewport.left*4, this.viewport.top*4, this.canvas.width * 4, this.canvas.height * 4,
-    //   0, 0, this.canvas.width, this.canvas.height )
   };
 
   CanvasDisplay.prototype.reset = function() {
@@ -50,13 +47,13 @@
 
   CanvasDisplay.prototype.drawFrame = function(animationTimeStep) {
     this.animationTime += animationTimeStep;
-    this.updateView();
+    this.drawViewport();
     this.clear();
     this.drawBackground();
-    this.drawActors();
+    this.drawMovingElements();
   };
 
-  CanvasDisplay.prototype.updateView = function() {
+  CanvasDisplay.prototype.drawViewport = function() {
     var view = this.viewport, margin = view.width / 3;
     var player = this.level.player; 
     var center = player.pos.plus(player.size.scale(0.5));
@@ -96,16 +93,16 @@
 
       this.context.save();
       if (this.flippedPlayer) {
-        flipHorizontally(this.context, x + (width + 9) / 2);
+        flipHorizontally(this.context, x + (width + 8) / 2);
       }
       this.context.drawImage(playerImage, 
-                        spriteIdx * (width + 9), 0, width + 9, height,
-                        x,                 y, width + 9, height);
+                        spriteIdx * (width + 8), 0, width + 8, height,
+                        x,                 y, width + 8, height);
 
       this.context.restore();
     };
 
-    CanvasDisplay.prototype.drawActors = function() {
+    CanvasDisplay.prototype.drawMovingElements = function() {
       this.level.actors.forEach(function(actor){
         var actorWidth = actor.size.x * scale;
         var actorHeight = actor.size.y * scale;
@@ -135,8 +132,7 @@
             if (tile == null) continue;
             var screenX = (x - view.left) * scale;
             var screenY = (y - view.top) * scale;
-            if( tile == "goo") {
-              
+            if( tile == "goo") {      
               this.context.drawImage(goo, 0, 0, scale, scale, screenX, screenY, scale, scale); 
             } else {
               this.context.drawImage(wall, 0, 0, scale, scale, screenX, screenY, scale, scale);
