@@ -24,7 +24,7 @@ __[Astroman](http://jmenestr.github.io/astroman) is a spacebased sidescroller im
 
   * Implements sprite animation for character movement
 
-  ```javascripot 
+  ``` javascript 
   // User Sprits and canvas drawImage to animate player character 
   // Give default sprite for jump animation and no movement 
     CanvasDisplay.prototype.drawPlayer = function(x, y, height, width) {
@@ -59,7 +59,8 @@ __[Astroman](http://jmenestr.github.io/astroman) is a spacebased sidescroller im
 
 * Takes advantue requestAnimationFrame to keep animations smooth and synced with browser refresh 
 
-```javascript 
+``` javascript 
+
   // Keeps track of time between current animation and last animation frames
   // and passes in this timestep to the animateLevel method, which throttles  
   // the maximum timestep to keep accurate collision detections 
