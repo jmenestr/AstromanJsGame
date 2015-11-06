@@ -55,11 +55,11 @@ __[Astroman](http://jmenestr.github.io/astroman) is a spacebased sidescroller im
       this.context.restore();
     };
 
-``` 
+  ``` 
 
-* Takes advantue requestAnimationFrame to keep animations smooth and synced with browser refresh 
+  * Takes advantue requestAnimationFrame to keep animations smooth and synced with browser refresh
 
-``` javascript 
+  ``` javascript 
 
   // Keeps track of time between current animation and last animation frames
   // and passes in this timestep to the animateLevel method, which throttles  
@@ -78,10 +78,10 @@ __[Astroman](http://jmenestr.github.io/astroman) is a spacebased sidescroller im
   }
   requestAnimationFrame(frame);
 }
+  
+  ```
 
-```
-
-## TODOS
+##TODOS
 
 * Implement sound
 * Implement other NPC enemy characters
