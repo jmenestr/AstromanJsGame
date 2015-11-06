@@ -1,5 +1,5 @@
 # AstromanJsGame
-__[http://jmenestr.github.io/astroman](Astroman) is a spacebased sidescroller implemented with vanilia javascript and HTML 5 Canvas.__ 
+__[Astroman](http://jmenestr.github.io/astroman) is a spacebased sidescroller implemented with vanilia javascript and HTML 5 Canvas.__ 
 
 ### Feature Highlights 
 
